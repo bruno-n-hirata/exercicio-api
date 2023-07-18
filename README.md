@@ -271,6 +271,8 @@
 │ │ └─ usuarioSchema.js
 │ ├─ 📂 routes
 │ │ └─ carroRoutes.js
+│ ├─ 📂 test
+│ │ └─ carroControllers.test.js
 │ └─ app.js
 ├─ .env
 ├─ .env.example
