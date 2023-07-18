@@ -163,7 +163,7 @@
 ### Cadastra novo usuário
 
 ```sh
-[POST] /api/usuário
+[POST] /api/usuario
 ```
 
 - Parâmetros
