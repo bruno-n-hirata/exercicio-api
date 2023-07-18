@@ -4,7 +4,7 @@ const carroModel = require("../models/carroModel")
 const obterTodos = async (request, response) => {
     try {
         const carros = await carroSchema.find({})
-        response.status(200).send(carros)
+        response.status(200).send({ mensagem: "Todos os carros.", carros })
     } catch (error) {
         response.status(500).send({ mensagem: error.message })
     }
@@ -15,7 +15,7 @@ const cadastrar = async (request, response) => {
         const carroModelSchema = Object.assign({}, carroModel, request.body)
         const carroNovo = new carroSchema(carroModelSchema)
         const carro = await carroNovo.save()
-        response.status(201).send(carro)
+        response.status(201).send({ mensagem: "Carro cadastrado.", carro })
     } catch (error) {
         response.status(500).send({ mensagem: error.message })
     }
@@ -36,7 +36,7 @@ const atualizar = async (request, response) => {
                 }
             })
             const carroAtualizado = await carro.save()
-            response.status(200).send(carroAtualizado)
+            response.status(200).send({ mensagem: "Carro atualizado.", carro: carroAtualizado })
         } else {
             response.status(404).send({ mensagem: `Não foi encontrado o carro de ID ${id}.` })
         }

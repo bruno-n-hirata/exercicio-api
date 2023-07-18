@@ -10,16 +10,19 @@
 
 > 200 - OK
 ```json
-[
-	{
-		"_id": "64b5ce8881593c79ef01d9bd",
-		"marca": "Marca",
-		"modelo": "Modelo",
-		"ano": 2023,
-		"createdAt": "2023-07-17T23:27:50.707Z",
-		"__v": 0
-	}
-]
+{
+	"mensagem": "Todos os carros.",
+	"carros": [
+		{
+			"_id": "64b5ce8881593c79ef01d9bd",
+			"marca": "Marca",
+			"modelo": "Modelo",
+			"ano": 2023,
+			"createdAt": "2023-07-17T23:27:50.707Z",
+			"__v": 0
+		}
+	]
+}
 ```
 
 ---
@@ -46,12 +49,15 @@
 > 201 - Created
 ```json
 {
-	"marca": "Marca",
-	"modelo": "Modelo",
-	"ano": 2023,
-	"createdAt": "2023-07-17T23:30:21.729Z",
-	"_id": "64b5cf1b562995bc89ed6ad2",
-	"__v": 0
+	"mensagem": "Carro cadastrado.",
+	"carro": {
+		"marca": "Marca",
+		"modelo": "Modelo",
+		"ano": 2023,
+		"createdAt": "2023-07-17T23:30:21.729Z",
+		"_id": "64b5cf1b562995bc89ed6ad2",
+		"__v": 0
+	}
 }
 ```
 
@@ -81,12 +87,15 @@
 > 200 - OK
 ```json
 {
-	"marca": "Marca",
-	"modelo": "Modelo",
-	"ano": 2023,
-	"createdAt": "2023-07-17T23:30:21.729Z",
-	"_id": "64b5cf1b562995bc89ed6ad2",
-	"__v": 0
+	"mensagem": "Carro atualizado.",
+	"carro": {
+		"marca": "Marca",
+		"modelo": "Modelo",
+		"ano": 2023,
+		"createdAt": "2023-07-17T23:30:21.729Z",
+		"_id": "64b5cf1b562995bc89ed6ad2",
+		"__v": 0
+	}
 }
 ```
 
@@ -279,5 +288,7 @@
 | bcrypt       | ^5.1.0  |
 | dotenv-safe  | ^8.2.0  |
 | express      | ^4.18.2 |
+| jest         | ^29.6.1 |
 | jsonwebtoken | ^9.0.1  |
 | mongoose     | ^7.3.4  |
+| supertest    | ^6.3.3  |
